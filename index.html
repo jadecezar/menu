@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<center>
+
+
+<div id="category-buttons">
+  <button onclick="scrollToCategory('main-dish')">Main Dishes</button>
+  <button onclick="scrollToCategory('vegetable')">Vegetables</button>
+  <button onclick="scrollToCategory('dessert')">Desserts</button>
+  <button onclick="scrollToCategory('drinks')">Drinks</button>
+  <button onclick="scrollToCategory('addons')">Add-ons</button>
+</div>
+</center>
+<div id="menu-section">
+  <h2>Restaurant Menu</h2>
+<br>
+  <h3 style="color: green; font-size: 50px;" id="main-dish">Main Dishes</h3>
+  <div class="menu">
+    <div class="item">
+      <img src="carbonara.jpg" alt="Carbonara" class="item-image">
+      <div class="item-details">
+        <h3>Carbonara</h3>
+        <p>Made with pancetta (or bacon) and plenty of Parmesan cheese Price: P300</p>
+        <button class="add-to-order" onclick="addToOrder('Carbonara', 300)">Add to Order</button>
+      </div>
+    </div>
+	<div class="item">
+      <img src="adobo.jpg" alt="Adobo" class="item-image">
+      <div class="item-details">
+        <h3>Adobo</h3>
+        <p>braising chicken legs (thighs and/or drumsticks) in a sauce made up of vinegar, soy sauce, garlic, and black pepper. Price: P250</p>
+        <button class="add-to-order" onclick="addToOrder('Adobo',250)">Add to Order</button>
+      </div>
+    </div><div class="item">
+      <img src="steak.jpg" alt="Steak" class="item-image">
+      <div class="item-details">
+        <h3>Beef Steak</h3>
+        <p>Braised in citrus, soy sauce, onions, and garlic. Price: P300</p>
+        <button class="add-to-order" onclick="addToOrder('Steak',300)">Add to Order</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 style="color: green; font-size: 50px;" id="vegetable">Vegetable</h3>
+  <div class="menu">
+ <div class="item">
+      <img src="bulanglang.jpg" alt="Bulanglang" class="item-image">
+      <div class="item-details">
+        <h3>Bulanglang</h3>
+        <p>Healthy vegetable soup dish. Price: P190</p>
+        <button class="add-to-order" onclick="addToOrder('Bulanglang',190)">Add to Order</button>
+      </div>
+    </div>
+	<div class="item">
+      <img src="laing.jpg" alt="Laing" class="item-image">
+      <div class="item-details">
+        <h3>Laing</h3>
+        <p>Filipino dish composed of dried taro leaves and coconut milk. Price: P280</p>
+        <button class="add-to-order" onclick="addToOrder('Laing',280)">Add to Order</button>
+      </div>
+    </div><div class="item">
+      <img src="munggo.jpg" alt="Munggo" class="item-image">
+      <div class="item-details">
+        <h3>Ginisang Munggo</h3>
+        <p>A delicious mung bean stew flavored with crispy pork cracklings. Price: P200</p>
+        <button class="add-to-order" onclick="addToOrder('Munggo',200)">Add to Order</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 style="color: green; font-size: 50px;" id="dessert">Desserts</h3>
+  <div class="menu">
+   <div class="item">
+      <img src="ube.jpg" alt="Ube" class="item-image">
+      <div class="item-details">
+        <h3>Ube Halaya</h3>
+        <p>Classic Filipino delicacy made of purple yam, coconut milk, and butter. Price: P200</p>
+        <button class="add-to-order" onclick="addToOrder('Ube',200)">Add to Order</button>
+      </div>
+    </div>
+	<div class="item">
+      <img src="halo.jpg" alt="Halo" class="item-image">
+      <div class="item-details">
+        <h3>Special Halo-Halo</h3>
+        <p>Concoction of various sweet treats, crushed ice and milk that are put together to culminate into one great cold treat. Price: P150</p>
+        <button class="add-to-order" onclick="addToOrder('Halo',150)">Add to Order</button>
+      </div>
+    </div><div class="item">
+      <img src="leche.jpg" alt="Leche" class="item-image">
+      <div class="item-details">
+        <h3>Leche Flan</h3>
+        <p>Filipino dessert made with egg yolks, milk, sugar, and vanilla extract. Price: P170</p>
+        <button class="add-to-order" onclick="addToOrder('Leche',170)">Add to Order</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 style="color: green; font-size: 50px;" id="drinks">Drinks</h3>
+  <div class="menu">
+ <div class="item">
+      <img src="iced.jpg" alt="Iced" class="item-image">
+      <div class="item-details">
+        <h3>Iced Coffee</h3>
+        <p>Coffee beverage served cold. Price: P190</p>
+        <button class="add-to-order" onclick="addToOrder('Iced',190)">Add to Order</button>
+      </div>
+    </div>
+	<div class="item">
+      <img src="milk.jpg" alt="Milk" class="item-image">
+      <div class="item-details">
+        <h3>Milk Tea</h3>
+        <p>Made with sweetened black tea, milk, and black tapioca pearls or boba Price: P175</p>
+        <button class="add-to-order" onclick="addToOrder('Milk',175)">Add to Order</button>
+      </div>
+    </div><div class="item">
+      <img src="fruit.jpg" alt="Fruit" class="item-image">
+      <div class="item-details">
+        <h3>Fruit Juice</h3>
+        <p>A drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables.  Price: P160</p>
+        <button class="add-to-order" onclick="addToOrder('Fruit',160)">Add to Order</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 style="color: green; font-size: 50px;" id="addons">Add-ons</h3>
+  <div class="menu">
+   <div class="item">
+      <img src="rice.jpg" alt="Rice" class="item-image">
+      <div class="item-details">
+        <h3>Extra Rice</h3>
+        <p>A simple, at-home treatment for sprains and strains. Price: P35</p>
+        <button class="add-to-order" onclick="addToOrder('Rice',35)">Add to Order</button>
+      </div>
+    </div>
+	<div class="item">
+      <img src="pearl.jpg" alt="pearl" class="item-image">
+      <div class="item-details">
+        <h3>Pearls(Iced coffee/Milk tea)</h3>
+        <p>Milk tea and Iced coffee drinks are not complete without the iconic boba pearls to add as sinkers to your drinks! Price: P30</p>
+        <button class="add-to-order" onclick="addToOrder('pearl',30)">Add to Order</button>
+      </div>
+    </div><div class="item">
+      <img src="water.jpg" alt="Water" class="item-image">
+      <div class="item-details">
+        <h3>Service Water</h3>
+        <p>Provide safe crystal clear drinking water for you! Price: P50</p>
+        <button class="add-to-order" onclick="addToOrder('Water',50)">Add to Order</button>
+      </div>
+    </div>
+  </div>
+<br>
+  <button id="review-order-btn" onclick="showReviewOrder()">Review Order</button>
+</div>
+
+<div id="review-order-section" style="display: alert">
+  <h3>Review Order</h3>
+  <ul id="order-list">
+  </ul>
+  <p>Total: P<span id="total">0.00</span></p>
+<br>
+  <div id="discount-options">
+    <h3>Discount Type</h3>
+    <label><input type="radio" name="discount" value="none" checked>No Discount</label>
+    <label><input type="radio" name="discount" value="student">Student Discount (10%)</label>
+    <label><input type="radio" name="discount" value="senior">Senior Citizen Discount (15%)</label>
+  </div>
+<br>
+  <div id="dining-options">
+    <h3>Service Mode Type</h3>
+    <label><input type="radio" name="dining" value="dine-in" checked>Dine In</label>
+    <label><input type="radio" name="dining" value="take-out">Take Out</label>
+  </div>
+<br>
+  <div id="payment-options">
+    <h3>Payment Option</h3>
+    <label><input type="radio" name="payment" value="cash" checked>Cash</label>
+    <label><input type="radio" name="payment" value="gcash">GCash</label>
+  </div>
+
+  <button onclick="editOrder()">Edit Order</button>
+  <button onclick="clearOrder()">Clear Order</button>
+  <button onclick="proceedToPayment()">Proceed to Payment</button>
+</div>
+  <br>
+</div>
+</center>
+<script src="script.js"></script>
+</body>
+</html>
